@@ -108,7 +108,44 @@ namespace aplicacion_de_consola
 
         private static void MostrarAlumnos()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (OracleConnection conn =
+                    new OracleConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string sql =
+                        "SELECT CODIGO, NOMBRE, " +
+                        "PROMEDIO, ESTADO " +
+                        "FROM ALUMNOS_L";
+
+                    using (OracleCommand cmd =
+                        new OracleCommand(sql, conn))
+                    {
+                        using (OracleDataReader dr =
+                            cmd.ExecuteReader())
+                        {
+                            Console.WriteLine("\n");
+                            Console.WriteLine(
+                                "========= LISTA DE ALUMNOS =========");
+
+                            while (dr.Read())
+                            {
+                                Console.WriteLine(
+                                    $"Codigo: {dr["CODIGO"]} | " +
+                                    $"Nombre: {dr["NOMBRE"]} | " +
+                                    $"Promedio: {dr["PROMEDIO"]} | " +
+                                    $"Estado: {dr["ESTADO"]}");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
-    }
+    }   
 }
