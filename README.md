@@ -1,7 +1,9 @@
 # -_aplicacion_de_consola_- :.
 Promedio de 46 Alumnos:
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9cb86205-f390-46ff-8d9f-34c6b7f8ab19" />  
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9cb86205-f390-46ff-8d9f-34c6b7f8ab19" /> 
+
+<img width="2551" height="1079" alt="image" src="https://github.com/user-attachments/assets/e7611ef8-1f15-43c3-be11-02e74e1492d3" />    
 
 ```
 Visual Studio 2022 + C# + Oracle Database 19c.
